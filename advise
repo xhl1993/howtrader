@@ -1,0 +1,5 @@
+这里为啥不创建一个mainwindow，文件。
+虽然你的课件里面有mainwindow，文件
+但是大部分的文件都没有加载log文件这个代码。
+自11课后的文件都mainwindow文件都没有写入log的模块，
+建议在howtrade文件中加入main-windows文件并加入writelog，的模块。
