@@ -101,12 +101,12 @@ class MultiTimeframeStrategy(CtaTemplate):
         elif self.pos > 0:
             if self.ma_trend < 0 or self.rsi_value < 50:
                 price = bar.close_price * 0.99
-                self.sell(Decimal(price), Decimal(abs(self.pos)))
+                self.sell(Decimal(price), Decimal(abs(self.pos)*2))
 
         elif self.pos < 0:
             if self.ma_trend > 0 or self.rsi_value > 50:
                 price = bar.close_price * 1.01
-                self.cover(Decimal(price), Decimal(abs(self.pos)))
+                self.buy(Decimal(price), Decimal(abs(self.pos)*2))
 
         self.put_event()
 
